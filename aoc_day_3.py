@@ -9,16 +9,13 @@ def instructions(file: str):
     return res
 
 
-def aoc3():
-    with open("aoc3_input.txt") as fd:
-        file = fd.read()
+with open("aoc3_input.txt") as fd:
+    file = fd.read()
 
-    clean_file = []
-    split_do = file.split("do()")
-    for line in split_do:
-        clean_file.append(line.split("don't()")[0])
+clean_file = []
+split_do = file.split("do()")
+for line in split_do:
+    clean_file.append(line.split("don't()")[0])
 
-    print(instructions(file))
-    print(instructions(clean_file))
-
-aoc3()
+print("Part 1:", instructions(file))
+print("Part 2:", instructions(clean_file))
