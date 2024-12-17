@@ -73,7 +73,7 @@ while q:
     for regA in range(A, A+8):
         registers["A"] = regA
         if launch(registers, program) == program[-i:]:
-            q += [(i+1, regA*8)]
+            q += [(i+1, regA << 3)]
             if i == len(program):
                 res = regA
                 q = []
