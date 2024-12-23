@@ -22,7 +22,7 @@ for secret in raw_input:
     changes = str(q)
     values[changes] = digit
     visited.add(changes)
-
+    # finish it!
     for i in range(1996):
         secret = calc(secret)
         digit = secret % 10
@@ -37,9 +37,4 @@ for secret in raw_input:
                 
             visited.add(changes)
 
-print(max(values.values()))
-
-# secret_numbers.append(secret)
-
-# print(secret_numbers)
-# print(sum(secret_numbers))
+print("Part2:", max(values.values()))
